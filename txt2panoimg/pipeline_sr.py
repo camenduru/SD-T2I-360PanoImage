@@ -26,10 +26,10 @@ from diffusers.pipelines.stable_diffusion import StableDiffusionPipelineOutput
 from diffusers.pipelines.stable_diffusion.safety_checker import \
     StableDiffusionSafetyChecker
 from diffusers.schedulers import KarrasDiffusionSchedulers
+from diffusers.utils.torch_utils import (randn_tensor, is_compiled_module)
 from diffusers.utils import (PIL_INTERPOLATION, deprecate,
                              is_accelerate_available, is_accelerate_version,
-                             is_compiled_module, logging, randn_tensor,
-                             replace_example_docstring)
+                             logging, replace_example_docstring)
 from transformers import CLIPImageProcessor, CLIPTextModel, CLIPTokenizer
 
 logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
